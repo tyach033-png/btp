@@ -1,0 +1,2 @@
+import { projects,tenders } from '@/lib/mock/data';
+export default function(){return <div className='space-y-4'><h1 className='text-3xl font-bold'>Tableau de bord BTPilot AI</h1><div className='grid md:grid-cols-3 gap-3'>{[['AO cette semaine',tenders.length],['Projets actifs',projects.filter(p=>p.status==='active').length],['Rapports ce mois',2],['Docs manquants',5],['Échéances proches',3],['AO compatibles',tenders.filter(t=>t.score>70).length]].map(([k,v])=><div key={String(k)} className='card'><p>{k}</p><p className='text-3xl font-bold'>{v}</p></div>)}</div></div>}

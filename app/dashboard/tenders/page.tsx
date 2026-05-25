@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import { tenders } from '@/lib/mock/data';
+export default function(){return <div><h1 className='text-2xl font-bold mb-4'>Appels d’offres</h1><table className='w-full bg-white'><thead><tr><th>Titre</th><th>MOA</th><th>Ville</th><th>Date limite</th><th>Catégorie</th><th>Score</th><th>Statut</th><th/></tr></thead><tbody>{tenders.map(t=><tr key={t.id} className='border-t'><td>{t.title}</td><td>{t.buyer}</td><td>{t.city}</td><td>{t.deadline}</td><td>{t.category}</td><td>{t.score}</td><td>{t.status}</td><td><Link href={`/dashboard/tenders/${t.id}/analysis`}>Analyser</Link></td></tr>)}</tbody></table></div>}
