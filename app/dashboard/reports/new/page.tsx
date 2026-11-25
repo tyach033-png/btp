@@ -1,0 +1,2 @@
+import { generateChantierReport } from '@/lib/ai/provider';
+export default function(){const r=generateChantierReport({project:'Aménagement voirie quartier industriel',work:'terrassement, pose bordures, compactage'}); return <div className='space-y-3'><h1 className='text-2xl font-bold'>Nouveau rapport journalier</h1><div className='card'>Formulaire chantier + upload photos (mock).</div><div className='card'><h2 className='font-bold'>Sortie IA</h2><p>{r.fr}</p><p className='text-right mt-2'>{r.ar}</p></div></div>}
